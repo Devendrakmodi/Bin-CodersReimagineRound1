@@ -1,6 +1,6 @@
 footer {
   min-height: 50vh;
-  background-image: url("/Images/night-background.gif");
+  background-image: url("./Images/night-background.gif");
   /* background: linear-gradient(
     45deg,
     rgba(67, 54, 69, 1) 30%,
