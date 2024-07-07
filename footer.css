@@ -1,0 +1,114 @@
+footer {
+  min-height: 50vh;
+  background-image: url("./Images/night-background.gif");
+  /* background: linear-gradient(
+    45deg,
+    rgba(67, 54, 69, 1) 30%,
+    rgba(44, 65, 82, 1) 100%
+  ); */
+  padding: 60px 130px 50px;
+  color: #ccc;
+}
+
+.footer-upper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-upper div > ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.footer-upper div > h4 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-upper div > ul > li {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 8px;
+  font-weight: 100;
+}
+
+.footer-upper div > ul > li > a {
+  color: #ccc;
+}
+
+.footer-upper div > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.footer-lower i {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  footer {
+    min-height: 50vh;
+    padding: 60px 30px 50px;
+  }
+  .footer-upper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer-lower {
+    text-align: center;
+  }
+  .footer-lower-left {
+    align-items: center;
+  }
+  .footer-lower-left div:nth-child(2) {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .footer-upper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 768px) {
+  .footer-upper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  footer {
+    min-height: 50vh;
+    padding: 60px 30px 50px;
+  }
+  .footer-lower {
+    text-align: center;
+  }
+  .footer-lower-left {
+    align-items: center;
+  }
+  .footer-lower-left div:nth-child(2) {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    padding: 50px calc(40px + (60 - 40) * (100vw - 768px) / (1024 - 768));
+  }
+  .footer-upper {
+    gap: 30px;
+  }
+  .footer-upper > div > ul {
+    gap: 5px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  footer {
+    padding: 50px 60px;
+  }
+}
