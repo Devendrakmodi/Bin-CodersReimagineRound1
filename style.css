@@ -1,0 +1,833 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --xtrasmall-index: 9;
+  --small-index: 99;
+  --medium-index: 999;
+  --large-index: 9999;
+  --xtralarge--index: 99999;
+  --god-index: 999999;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+      60deg,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(188, 218, 243, 0.4) 70%,
+      rgba(232, 124, 227, 0.2) 100%
+    )
+    center no-repeat;
+  background-size: cover;
+  color: rgb(51, 51, 51);
+  cursor: none;
+  pointer-events: all;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+.cursor {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: rgba(33, 170, 255, 0.47);
+  border: 2px solid rgb(0, 157, 255);
+  backdrop-filter: blur(2px);
+  z-index: var(--god-index);
+  position: fixed;
+}
+.point {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: var(--god-index);
+}
+
+/* ///////////////////////////////////////////////////// */
+
+.loader {
+  position: fixed;
+  top: 0;
+  z-index: var(--god-index);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: linear-gradient(
+    45deg,
+    rgba(237, 195, 114, 1) 16%,
+    rgba(182, 127, 127, 1) 45%,
+    rgba(136, 193, 176, 1) 73%
+  );
+  padding: 20px;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid black;
+  border-top: 4px solid white;
+  margin-bottom: 20px;
+}
+
+.loader h2 {
+  font-size: 56px;
+}
+
+.loader p {
+  font-size: 16px;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+.landing {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  font-family: Untitledsans, sans-serif;
+  color: rgb(51, 51, 51);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.page-1 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-1 h3 {
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  font-size: 50px;
+}
+
+.page-2 {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.page-2-inner {
+  display: flex;
+  height: 100vh;
+  min-width: 400vw;
+  /* overflow-x: hidden; */
+  transform: translateX(0%);
+  padding: 0px 50px;
+  position: relative;
+}
+.page-2-inner > h2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: 80px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.page-2-inner .span-store {
+  display: inline-block;
+}
+.dev {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+}
+/* ///////////////////////////////////////////////////// */
+
+.frontheader {
+  padding: 0px 0px 50px;
+}
+
+.select-season {
+  background-color: #020e2c;
+  background: url(https://www.shutterstock.com/image-vector/beautiful-galaxy-background-nebula-cosmos-260nw-1729509721.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+
+.select-season button {
+  width: 20%;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.season-box h2 {
+  font-size: 42px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .video-box {
+  width: 90vw;
+  height: 80vh;
+  border-radius: 30px;
+} */
+
+.video-box iframe {
+  width: 90vw;
+  height: 80vh;
+  border-radius: 30px;
+}
+
+/* ///////////////////////////////////////////// */
+.collections {
+  padding: 0px 30px;
+}
+
+.collections h2 {
+  font-size: 42px;
+}
+
+.first-collections,
+.secondcol-box-1,
+.secondcol-box-2,
+.third-collections {
+  background: center no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all ease-in 1s;
+}
+
+.first-collections,
+.third-collections,
+.second-collections {
+  height: 80vh;
+  width: 30%;
+  margin: 0 20px;
+}
+
+.second-collections {
+  flex-direction: column;
+}
+
+.first-collections {
+  background-image: url("/Images/me-image.webp");
+}
+
+.secondcol-box-1 {
+  background-image: url("/Images/children-image-3.gif");
+}
+
+.secondcol-box-2 {
+  background-image: url("/Images/kids-image-2.jpg");
+}
+
+.third-collections {
+  background-image: url("/Images/women-image-1.avif");
+}
+
+.first-inner,
+.box-1-inner,
+.box-2-inner,
+.third-inner {
+  transition: all ease-in 1s;
+}
+
+.first-collections:hover .first-inner,
+.secondcol-box-1:hover .box-1-inner,
+.secondcol-box-2:hover .box-2-inner,
+.third-collections:hover .third-inner {
+  width: 0%;
+}
+/* ///////////////////////////////////////////// */
+
+.details > h2 {
+  font-size: 42px;
+}
+
+.replacement > div {
+  height: 90vh;
+  width: 90%;
+  text-align: center;
+  border-radius: 50px;
+  border: 2px solid black;
+  background: url("/Images/count-image-1.avif") center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.details > div  h2 {
+  font-size: 42px;
+}
+
+.count {
+  font-size: 56px;
+  color: black;
+}
+
+/* ///////////////////////////////////////////// */
+.season-cloth-box {
+  background-color: #0b0b1c;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+  padding: 30px;
+}
+
+.season-cloth-box div {
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0 90%,
+    0 10%
+  );
+  column-gap: 20px;
+}
+
+.season-cloth-box div:nth-child(1) {
+  width: auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.season-cloth-box div:nth-child(1) {
+  width: auto;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.season-cloth-box div:nth-child(1) {
+  width: auto;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.season-cloth-box div:nth-child(1) {
+  width: auto;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+.side-label {
+  background-color: #0b0b1c;
+  top: 50%;
+  right: 45px;
+  z-index: 99;
+  transform: translateY(-50%) translateX(50%);
+  color: #fff;
+  position: fixed;
+  rotate: 90deg;
+  padding: 10px 25px;
+  font-size: 18px;
+  border: 1px solid #fff;
+  border-top: none;
+  transform-origin: right;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+.category-section {
+  padding: 0px 20px;
+}
+
+.category-section h2 {
+  font-size: 42px;
+}
+
+.men-cat-images,
+.women-cat-images {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 20px;
+}
+.men-cat-images > div,
+.women-cat-images > div {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* ///////////////////////////////////////////////////// */
+.icons {
+  margin: 2vw;
+}
+.icons-inner {
+  margin-top: 2vw;
+  font-size: 1vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.icons-inner p {
+  text-align: center;
+}
+.icons-inner p span {
+  font-size: 3vw;
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .cursor {
+    display: none !important;
+  }
+  .point {
+    display: none !important;
+  }
+
+  .loader {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loader h2 {
+    font-size: 24px;
+  }
+  .page-1 > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    line-height: 36px;
+    font-size: 26px;
+  }
+  .page-1 h3 {
+    height: 0%;
+    line-height: 36px;
+    font-size: 26px;
+  }
+  .pin-spacer {
+    height: calc(
+      215vh + (540 - 215) * (100vw - 320px) / (500 - 320)
+    ) !important;
+    padding: 0 !important;
+    overflow-y: hidden;
+  }
+  .page-2 {
+    padding: 0px 0 0 0;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  .page-2-inner {
+    min-width: 1000vw;
+    padding: 0px 40px;
+  }
+  .page-2-inner > h2 {
+    font-size: 28px;
+    line-height: 60px;
+  }
+  .side-label {
+    right: 40px;
+    padding: 8px 20px;
+    font-size: 15px;
+  }
+  .video-box {
+    width: 95vw;
+    height: 80vh;
+    border-radius: 10px;
+  }
+  .frontheader {
+    padding: 0px 0px 10px;
+  }
+  .season-box h2 {
+    font-size: 28px;
+    padding: 0px 10px;
+  }
+  .select-season {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+  .select-season button {
+    width: 45%;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .season-cloth-box {
+    background-color: #0b0b1c;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+  .season-cloth-box div:nth-child(1) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .season-cloth-box div:nth-child(2) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .season-cloth-box div:nth-child(3) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .season-cloth-box div:nth-child(4) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  .collections {
+    padding: 0px 20px;
+  }
+  .collections h2 {
+    font-size: 28px;
+    padding: 0px 10px;
+  }
+  .collections-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .first-collections,
+  .third-collections,
+  .second-collections {
+    height: 400px;
+    min-width: 100%;
+    margin: 0 20px;
+  }
+  .first-inner img {
+    object-position: top;
+  }
+  .details h2 {
+    font-size: 28px;
+    padding: 0px 10px;
+  }
+  .details > .details-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .details > .details-inner > div {
+    width: 100%;
+  }
+
+  .replacement {
+    padding: 10px 20px;
+  }
+  .category-section h2 {
+    font-size: 28px;
+    padding: 0px 10px;
+  }
+
+  .men-cat-images,
+  .women-cat-images {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 650px) {
+  .page-2-inner {
+    min-width: 700vw;
+    padding: 0px 40px;
+  }
+  .slides-text-part .text p {
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+  }
+
+  .loader h2 {
+    font-size: 30px;
+  }
+
+  .season-cloth-box {
+    grid-template-columns: auto;
+  }
+
+  .season-cloth-box div:nth-child(1) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .season-cloth-box div:nth-child(2) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .season-cloth-box div:nth-child(3) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .season-cloth-box div:nth-child(4) {
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  .collections {
+    padding: 0px 20px;
+  }
+  .collections h2 {
+    font-size: 28px;
+    padding: 0px 10px;
+  }
+  .collections-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .second-collections {
+    height: 200px;
+    min-width: 100%;
+    flex-direction: row;
+  }
+  .second-collections > div {
+    height: 100%;
+  }
+
+  .first-collections {
+    background-image: url(https://assets.ajio.com/cms/AJIO/WEB/d-1.0-UHP-03072024-uhphim-z10-p2-vanheusen-allensolly-min40.jpg);
+  }
+  .first-collections,
+  .third-collections {
+    height: 300px;
+    min-width: 100%;
+  }
+  .first-inner img,
+  .third-inner img {
+    object-position: top;
+  }
+  .details > .details-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .details > .details-inner > div {
+    width: 100%;
+  }
+  .category-section h2 {
+    font-size: 28px;
+    padding: 0px 10px;
+  }
+
+  .men-cat-images,
+  .women-cat-images {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 768px) {
+  .page-2-inner {
+    min-width: 550vw;
+  }
+
+  .video-box {
+    width: 95vw;
+    height: 80vh;
+    border-radius: 20px;
+  }
+  .season-cloth-box {
+    grid-template-columns: auto auto;
+  }
+  .collections {
+    padding: 0px 20px;
+  }
+  .collections-inner {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .first-collections,
+  .second-collections {
+    height: 60vh;
+    margin: 0px;
+  }
+
+  .third-collections {
+    height: 55vh;
+    margin: 0px 20px;
+  }
+
+  .first-collections,
+  .second-collections {
+    width: 45%;
+  }
+  .third-collections {
+    background-image: url(https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03072024-TopBrandBanner-Z3-P3-Ishin-Vredevogel-flat75.jpg);
+    width: 100%;
+  }
+  .third-inner img {
+    object-position: top;
+  }
+
+  .men-cat-images,
+  .women-cat-images {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .cursor {
+    display: none !important;
+  }
+  .point {
+    display: none !important;
+  }
+
+  /* /////////////////////////////////////////////////// */
+  .page-1 > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    line-height: 36px;
+    font-size: 26px;
+  }
+
+  .page-1 h3 {
+    line-height: calc(50px + (68 - 50) * (100vw - 500px) / (768 - 500));
+    font-size: calc(30px + (42 - 30) * (100vw - 500px) / (768 - 500));
+  }
+  .pin-spacer {
+    height: calc(
+      280vh + (850 - 280) * (100vw - 500px) / (768 - 500)
+    ) !important;
+    padding: 0 !important;
+    overflow-y: hidden;
+  }
+  .page-2 {
+    padding: 0px 0 0 0;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .page-2-inner > h2 {
+    line-height: calc(50px + (68 - 50) * (100vw - 500px) / (768 - 500));
+    font-size: calc(30px + (42 - 30) * (100vw - 500px) / (768 - 500));
+  }
+  /* /////////////////////////////////////////////////// */
+
+  .frontheader {
+    padding: 0px 0px 10px;
+  }
+  .season-box h2 {
+    font-size: 34px;
+    padding: 0px 20px;
+  }
+  .collections h2 {
+    font-size: 34px;
+    padding: 0px 20px;
+  }
+  .details h2 {
+    font-size: 34px;
+    padding: 0px 20px;
+  }
+  .category-section h2 {
+    font-size: 34px;
+    padding: 0px 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cursor {
+    display: none !important;
+  }
+  .point {
+    display: none !important;
+  }
+  .page-1 h3 {
+    line-height: calc(66px + (80 - 66) * (100vw - 768px) / (1024 - 768));
+    font-size: calc(46px + (60 - 46) * (100vw - 768px) / (1024 - 768));
+  }
+  .pin-spacer {
+    height: calc(
+      400vh + (1000 - 400) * (100vw - 768px) / (1024 - 768)
+    ) !important;
+    padding: 0 !important;
+    overflow-y: hidden;
+  }
+  .page-2-inner {
+    min-width: 300vw;
+  }
+  .page-2 {
+    padding: 0px 0 0 0;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .page-2-inner > h2 {
+    line-height: calc(66px + (80 - 66) * (100vw - 768px) / (1024 - 768));
+    font-size: calc(46px + (60 - 46) * (100vw - 768px) / (1024 - 768));
+  }
+  .collections {
+    padding: 0px 10px;
+  }
+  .collections-inner {
+    gap: 20px;
+  }
+  .first-collections,
+  .third-collections,
+  .second-collections {
+    margin: 0px;
+  }
+  .men-cat-images,
+  .women-cat-images {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .category-section h2 {
+    font-size: 42px;
+    padding: 0px 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .dev {
+    display: none;
+  }
+  .page-1 h3 {
+    line-height: calc(66px + (80 - 66) * (100vw - 1024px) / (1200 - 1024));
+    font-size: calc(46px + (60 - 46) * (100vw - 1024px) / (1200 - 1024));
+  }
+  .pin-spacer {
+    height: calc(
+      475vh + (800 - 475) * (100vw - 1024px) / (1200 - 1024)
+    ) !important;
+    padding: 0 !important;
+    overflow-y: hidden;
+  }
+  .page-2-inner {
+    min-width: 400vw;
+  }
+  .page-2 {
+    padding: 0px 0 0 0;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .page-2-inner > h2 {
+    line-height: calc(66px + (80 - 66) * (100vw - 1024px) / (1200 - 1024));
+    font-size: calc(46px + (60 - 46) * (100vw - 1024px) / (1200 - 1024));
+  }
+  .men-cat-images,
+  .women-cat-images {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .men-cat-images,
+  .women-cat-images {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}

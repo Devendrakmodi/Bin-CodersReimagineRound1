@@ -1,0 +1,179 @@
+.navbar-bg {
+  height: 90px;
+  width: 100%;
+}
+.header {
+  height: 90px;
+  width: 100%;
+  position: relative;
+  background-color: #000000;
+}
+
+.navbar {
+  position: relative;
+  z-index: 99999;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid #2c4152;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff1a;
+  backdrop-filter: blur(10px);
+  border-radius: 0px 0px 14px 14px;
+  background-color: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(188, 218, 243, 0.4) 70%,
+    rgba(232, 124, 227, 0.2) 100%
+  );
+}
+
+.logo {
+  width: 120px;
+  height: 35px;
+}
+
+.navbar menu li {
+  margin: 0 2px;
+}
+
+.navbar menu li a {
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+}
+
+.navbar menu li a:hover {
+  font-weight: 700;
+}
+
+.mode-btn > div {
+  padding: 5px;
+}
+
+.mode-btn > div > i {
+  font-size: 30px;
+}
+
+.search-input {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+
+.search-input input[type="search"] {
+  width: 100%;
+  padding: 10px 40px 10px 20px;
+  border: 1px solid #8f8f8f;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.search-input .fa-search {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .logo {
+    width: 85px;
+    height: 25px;
+    margin: 0;
+  }
+  .navbar {
+    position: fixed;
+
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #2c4152;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff1a;
+    backdrop-filter: blur(10px);
+    border-radius: 0px 0px 14px 14px;
+  }
+
+  .navbar menu,
+  .navbar .search-input {
+    display: none;
+  }
+
+  .mode-btn {
+    display: none;
+  }
+  .sign-up {
+    display: none;
+  }
+  .humberger {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .navbar {
+    gap: 160px;
+  }
+  .navbar menu,
+  .navbar .search-input {
+    display: none;
+  }
+
+  .mode-btn {
+    display: none;
+  }
+  .sign-up {
+    display: none;
+  }
+  .humberger {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    gap: 130px;
+  }
+  .navbar menu,
+  .navbar .search-input {
+    display: none;
+  }
+
+  .mode-btn {
+    display: none;
+  }
+
+  .humberger {
+    display: inline-block;
+    margin: 0px 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .logo {
+    width: 110px;
+    height: 30px;
+  }
+
+  .dark-btn {
+    display: none;
+  }
+  .sign-up {
+    display: none;
+  }
+  .search-input {
+    margin: 0;
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .search-input {
+    max-width: 260px;
+  }
+}

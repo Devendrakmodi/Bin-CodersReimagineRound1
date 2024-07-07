@@ -1,0 +1,105 @@
+.login-signup-page {
+  width: 100%;
+  height: 100%;
+  z-index: var(--xtralarge--index);
+  position: fixed;
+  top: 0;
+  background: url(https://png.pngtree.com/background/20211215/original/pngtree-childrens-clothing-store-shopping-mall-photography-map-with-map-picture-image_1485289.jpg)
+    no-repeat center;
+  /* background: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMjItbWluZC0xNl8xLmpwZw.jpg) no-repeat center; */
+  background-size: cover;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.login-signup-container {
+  position: relative;
+  width: 350px;
+  min-height: 50vh;
+  border-radius: 30px;
+  background-color: #ffffff0e;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.login-user h2,
+.signup-user h2 {
+  font-size: 30px;
+}
+
+.login-user input[type="text"],
+.login-user input[type="email"],
+.login-user input[type="password"],
+.signup-user input[type="text"],
+.signup-user input[type="email"],
+.signup-user input[type="password"] {
+  font-size: 16px;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: 2px solid #ffffff;
+  outline-color: #ffffff;
+  background-color: transparent;
+}
+
+.login-user input[type="checkbox"],
+.signup-user input[type="checkbox"] {
+  border: 2px solid #ff0000;
+  outline-color: #ffffff;
+  background-color: transparent;
+  margin-right: 2px;
+}
+
+.login-user input::placeholder,
+.signup-user input::placeholder {
+  color: #fff;
+}
+
+.login-user button,
+.signup-user button {
+  width: 100%;
+  padding: 10px 50px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #000000;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+}
+
+.other-options {
+  padding: 0px 5px;
+}
+
+.other-options p,
+.login-page-para,
+.signup-page-para {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.login-page-para a,
+.signup-page-para a {
+  font-weight: 500;
+  color: #fff;
+}
+
+.close-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1vw;
+}
+.close-icons span {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .login-signup-container {
+    width: 280px;
+    padding: 15px;
+  }
+}

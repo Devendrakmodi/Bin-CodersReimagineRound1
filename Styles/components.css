@@ -1,0 +1,230 @@
+@font-face {
+  font-family: SourceSansPro;
+  src: url(/Fonts/SourceSansPro.woff);
+}
+
+@font-face {
+  font-family: Montserrat-Variable;
+  src: url(/Fonts/Montserrat-Variable.ttf);
+}
+
+.main-btn {
+  padding: 8px 25px;
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: SourceSansPro;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 2px 2px 0px 0px rgb(0 0 0 / 20%);
+  box-shadow: inset 2px 2px 4px 0px rgb(181 0 255 / 25%);
+  cursor: pointer;
+}
+
+.humberger i {
+  font-size: 30px;
+}
+
+.slides {
+  width: 95vw;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  margin: 0 50px;
+}
+
+.slides .slides-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+.slide-1 {
+  position: relative;
+}
+
+.slides .slides-inner img {
+  filter: brightness(75%);
+}
+
+.slides-bg-color {
+  background-color: #30df91;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: var(--xtrasmall-index);
+}
+.slides .slides-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: overlay;
+  top: 0%;
+  left: 0%;
+}
+
+.slides-text-part {
+  position: absolute;
+  z-index: var(--small-index);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.slides-text-part .text {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 10px;
+  margin-right: 52px;
+}
+
+.slides-text-part .text h2 {
+  font-size: 54px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.slides-text-part .text p {
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+}
+
+.slides-image-container {
+  height: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.slides-image-container .slides-image-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+}
+
+.slides-image-container .slides-image-sec > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 300px;
+  width: 300px;
+  gap: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide-2 .slides-bg-color {
+  background-color: #058b90;
+}
+
+.slide-3 .slides-bg-color {
+  background-color: #ef7d00;
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .main-btn {
+    padding: 8px 18px;
+    font-size: 15px;
+  }
+
+  .slides {
+    width: 100%;
+    height: 90vh;
+  }
+  .slides-text-part .text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .slides-text-part .text {
+    padding: 30px;
+    margin-right: 20px;
+  }
+  .slides-image-container .slides-image-sec > div {
+    height: 300px;
+    width: 250px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .slides {
+    width: 100%;
+    height: 90vh;
+  }
+  .slides-text-part .text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .slides-text-part .text {
+    padding: 30px;
+    margin-right: 20px;
+  }
+  .slides-image-container .slides-image-sec > div {
+    height: 300px;
+    width: 250px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .slides {
+    width: 100%;
+    height: 90vh;
+  }
+  .slides-text-part .text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .slides-text-part .text {
+    padding: 30px;
+    margin-right: 20px;
+  }
+  .slides-image-container .slides-image-sec > div {
+    height: 300px;
+    width: 250px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .slides {
+    width: 100%;
+    height: 90vh;
+  }
+  .slides-text-part .text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .slides-text-part .text {
+    padding: 30px;
+    margin-right: 20px;
+  }
+  .slides-image-container .slides-image-sec > div {
+    height: 300px;
+    width: 250px;
+  }
+  .slides-text-part .text p {
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+  }
+}
+
