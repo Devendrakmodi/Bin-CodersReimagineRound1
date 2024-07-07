@@ -226,19 +226,19 @@ body {
 }
 
 .first-collections {
-  background-image: url("/Images/me-image.webp");
+  background-image: url("./Images/me-image.webp");
 }
 
 .secondcol-box-1 {
-  background-image: url("/Images/children-image-3.gif");
+  background-image: url("./Images/children-image-3.gif");
 }
 
 .secondcol-box-2 {
-  background-image: url("/Images/kids-image-2.jpg");
+  background-image: url("./Images/kids-image-2.jpg");
 }
 
 .third-collections {
-  background-image: url("/Images/women-image-1.avif");
+  background-image: url("./Images/women-image-1.avif");
 }
 
 .first-inner,
@@ -266,7 +266,7 @@ body {
   text-align: center;
   border-radius: 50px;
   border: 2px solid black;
-  background: url("/Images/count-image-1.avif") center no-repeat;
+  background: url("./Images/count-image-1.avif") center no-repeat;
   background-size: cover;
   margin: 0 auto;
 }
